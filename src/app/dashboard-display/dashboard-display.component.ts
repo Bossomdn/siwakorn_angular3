@@ -7,6 +7,7 @@ import { HttpClientModule } from '@angular/common/http';
   selector: 'app-dashboard-display',
   standalone: true,
   imports: [CommonModule,HttpClientModule],
+  providers: [DogService],
   templateUrl: './dashboard-display.component.html',
   styleUrl: './dashboard-display.component.css'
 })
@@ -17,9 +18,13 @@ export class DashboardDisplayComponent implements OnInit{
   constructor(private dogService: DogService) { }
 
   ngOnInit(): void {
-      this.dogService.getRandomDogImage().subscribe( data => {
-        this.dogImageUrl = data.message;
-      })
+    this.loadRandomDogImage();
+  }
+
+  loadRandomDogImage(): void {
+    this.dogService.getRandomDogImage().subscribe( data => {
+      this.dogImageUrl = data.message;
+    });
   }
 
 }

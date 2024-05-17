@@ -5,6 +5,7 @@ import { DogService } from '../dog.service';
   selector: 'app-data-selector',
   standalone: true,
   imports: [],
+  providers: [DogService],
   templateUrl: './data-selector.component.html',
   styleUrl: './data-selector.component.css'
 })
