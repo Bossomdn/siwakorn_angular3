@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { DogService } from '../dog.service';
 
 @Component({
   selector: 'app-data-selector',
@@ -8,5 +9,13 @@ import { Component } from '@angular/core';
   styleUrl: './data-selector.component.css'
 })
 export class DataSelectorComponent {
+
+  constructor(private dogService: DogService) {}
+
+  getDogImage() {
+    this.dogService.getRandomDogImage().subscribe( data => {
+      console.log(data.message);
+    });
+  }
 
 }
