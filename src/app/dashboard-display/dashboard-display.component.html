@@ -1,5 +1,9 @@
-<div *ngIf="dogImageUrl">
-    <img [src]="dogImageUrl" alt="Random Dog">
-  </div>
-  <button (click)="loadRandomDogImage()">Random Dog Image</button>
+<div class="dashboard-display">
+    <div *ngIf="dogImageUrl">
+        <img [src]="dogImageUrl" alt="Random Dog">
+      </div>
+    <button (click)="loadRandomDogImage()">Random Dog Image</button>
+</div>
+
+
   
