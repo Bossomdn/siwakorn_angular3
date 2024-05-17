@@ -1,4 +1,4 @@
-import { Component, NgModule } from '@angular/core';
+import { Component, NgModule, ViewChild } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { DataSelectorComponent } from './data-selector/data-selector.component';
 import { DashboardDisplayComponent } from './dashboard-display/dashboard-display.component';
@@ -14,4 +14,10 @@ import { CommonModule } from '@angular/common';
 })
 export class AppComponent {
   title = 'siwakorn_ass3';
+
+  @ViewChild('dashboard') dashboard!: DashboardDisplayComponent;
+
+  handleDogImageLoaded(url: string): void {
+    this.dashboard.setDogImage(url);
+  }
 }

@@ -1,5 +1,9 @@
-<div class="component">
-    <app-dashboard-display></app-dashboard-display>
+<div class="container">
+    <div class="component data-selector-component">
+      <app-data-selector (dogImageLoaded)="handleDogImageLoaded($event)"></app-data-selector>
+    </div>
+    <div class="component dashboard-display-component">
+      <app-dashboard-display #dashboard></app-dashboard-display>
+    </div>
 </div>
-
-
+  
