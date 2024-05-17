@@ -3,22 +3,22 @@ body {
     margin: 0;
     padding: 0;
     background-color: #f0f0f0;
-    height: 100vh; /* Ensure the body takes the full height of the viewport */
+    height: 100vh; 
   }
   
   html, body {
-    height: 100%; /* Ensure the body and html take the full height of the viewport */
+    height: 100%; 
   }
   
   .container {
     display: flex;
     justify-content: space-around;
     padding: 20px;
-    height: 100%; /* Ensure the container takes the full height of the viewport */
+    height: 100%; 
   }
   
   .component {
-    background-color: #606060;
+    background-color: #0ac0ee;
     color: white;
     padding: 20px;
     margin: 10px;
@@ -27,16 +27,16 @@ body {
   }
   
   .data-selector-component {
-    flex: 1; /* Adjust this value to make it smaller */
-    max-width: 30%; /* Ensure it doesn't grow too large */
+    flex: 1; 
+    max-width: 30%; 
     display: flex;
     justify-content: center;
     align-items: center;
   }
   
   .dashboard-display-component {
-    flex: 2; /* Adjust this value to make it larger */
-    max-width: 70%; /* Ensure it doesn't grow too large */
+    flex: 2; 
+    max-width: 70%; 
     display: flex;
     justify-content: center;
     align-items: center;
